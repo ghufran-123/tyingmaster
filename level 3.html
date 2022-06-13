@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Master</title>
+
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Arizonia&family=Bebas+Neue&family=Cookie&family=Oswald:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="./style.css">
+
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Typing Master</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Start</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<div class="container-fluid cen">
+    
+    <input class="name" type="name" id="cN" placeholder="Enter Your Name">
+    <br>
+        <button onclick="invisible()" class="btn btn-outline-dark st">
+            Start
+        </button>
+
+
+
+
+        
+        <div class="row invisible" id="in">
+          <div class="column card">
+              <h3>
+                <Span>Difficulty Level 3 - 236 Words</Span>
+              </h3>
+              <p class="prompt">
+
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+              </p>
+            </div>
+            <div class="column card">
+              <h4>
+                Type Here
+                <span id="ac">
+                  Accuracy:-
+                </span>
+              </h4>
+              <textarea name="" id="t" style="width: 100%;" rows="19"></textarea>
+
+       
+            </div>
+            <button onclick="check()">Check</button>
+
+            <div id="gif">
+              <h3 id="result" style="text-align: start; margin-top: 3%;">
+                <span id="totalWords">
+                  Total Words:-
+                </span>
+                <br>
+                <span id="totalWordstyped">
+                  Total Words You Typed:-
+                </span>
+                
+                <br>
+                <span id="correctWords">
+                  Correct Words:-
+                  </span>
+                
+                <br>
+                <span id="wrongWords">
+                  Wrong Words:- 
+                </span>
+                
+                <br>
+                <span id="accuracy">
+                  Accuracy:-
+                </span>
+                
+              </h3>
+              <img class="image" src="https://c.tenor.com/ZuQCjAmStU4AAAAC/excellent-thumbs-up.gif" alt="">
+            </div>
+    
+        </div>
+        </div>
+
+        
+</div>
+</body>
+
+<script>
+  function invisible()
+  {
+    document.querySelector("div#in").classList.toggle("invisible");
+  }
+
+
+  function check()
+  {
+    var input=document.querySelector("#t").value;
+    var inputTempArr=[]=input;
+    var temp="";
+    var inputFinalArr=[];
+    
+    
+    var checkTextStr="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).";
+    
+    var checkTextArr=[]=checkTextStr;
+    var checkFinalText=[];
+
+
+
+    for(var i=0; i<inputTempArr.length+1; i++)
+    {
+      if(inputTempArr[i]==" " || inputTempArr[i]== undefined )
+      {
+          inputFinalArr.push(temp);
+
+          temp="";
+          
+      }
+      else{
+        temp+=inputTempArr[i];
+      }
+    }
+
+    temp="";
+    for(var i=0; i<checkTextArr.length+1; i++)
+    {
+      if(checkTextArr[i]==" " || checkTextArr[i]== undefined )
+      {
+          checkFinalText.push(temp);
+          temp="";
+          
+      }
+      else{
+        temp+=checkTextArr[i];
+      }
+    }
+    var correctWords=0;
+    var wrongWords=0;
+    var totalWords=inputFinalArr.length;
+    
+    for(var i=0;i<inputFinalArr.length;i++)
+    {
+      if(checkFinalText[i]==inputFinalArr[i])
+      {
+        correctWords++;
+      }
+      else{
+        wrongWords++;
+      }
+    }
+   var accuracy=Math.round((correctWords/totalWords)*100);
+   document.querySelector("#totalWords").innerHTML="Total Words:- "+ checkFinalText.length;
+   document.querySelector("#totalWordstyped").innerHTML="Total Words You Typed:- "+ inputFinalArr.length;
+   document.querySelector("#correctWords").innerHTML="Correct Words:- "+ correctWords;
+   document.querySelector("#wrongWords").innerHTML="Wrong Words:- "+ wrongWords;
+   document.querySelector("#accuracy").innerHTML="Accuracy:- "+ accuracy + "%";
+    if(accuracy>=80)
+    {
+      
+     document.querySelector(".image").classList.toggle("image");
+    }
+    else{
+      document.querySelector(".image").classList.add(".image");
+    }
+  }
+</script>
+</html>

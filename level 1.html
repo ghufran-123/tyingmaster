@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Master</title>
+
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Arizonia&family=Bebas+Neue&family=Cookie&family=Oswald:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="./style.css">
+
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Typing Master</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Start</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<div class="container-fluid cen">
+    
+    <input class="name" type="name" id="cN" placeholder="Enter Your Name">
+    <br>
+        <button onclick="invisible()" class="btn btn-outline-dark st">
+            Start
+        </button>
+
+
+
+
+        
+        <div class="row invisible" id="in">
+          <div class="column card">
+              <h3>
+                <Span>Difficulty Level 1 - 236 Words</Span>
+              </h3>
+              <p class="prompt">
+
+                Trying to make a wise, good choice when thinking about what kinds of careers might be best for you is a hard thing to do. Your future may very well depend on the ways you go about finding the best job openings for you in the world of work. Some people will feel that there is one and only one job in the world for them. Hard thinking and a lot of hard work will help them find the one job that is best for them. Jobs are there for those with skills and a good work ethic. Many new young artists in the upper New England states are famous around the world as leaders in new American art. These fine artists are very good in their chosen fields and are willing to share their many talents by teaching others. The students have had the chance to learn and use skills in oil painting, sketching with chalk, sculpting, and weaving. Learning to typewrite is a skill that will help all of us in our work today. The development of the computer will open doors for people with the keyboarding skills and will make typing a necessity. Managers, as well as secretaries, will need skill at the keyboard to input data and process words. Therefore, good keyboarding skills may be important to you.
+
+              </p>
+            </div>
+            <div class="column card">
+              <h4>
+                Type Here
+                <span id="ac">
+                  Accuracy:-
+                </span>
+              </h4>
+              <textarea name="" id="t" style="width: 100%;" rows="19"></textarea>
+
+       
+            </div>
+            <button onclick="check()">Check</button>
+
+            <div>
+              <h3 id="result" style="text-align: start; margin-top: 3%;">
+                <span id="totalWords">
+                  Total Words:-
+                </span>
+                <br>
+                <span id="totalWordstyped">
+                  Total Words You Typed:-
+                </span>
+                
+                <br>
+                <span id="correctWords">
+                  Correct Words:-
+                  </span>
+                
+                <br>
+                <span id="wrongWords">
+                  Wrong Words:- 
+                </span>
+                
+                <br>
+                <span id="accuracy">
+                  Accuracy:-
+                </span>
+                
+              </h3>
+              <img class="image" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSExMVFRUVFxcZGBUXFxUXFRcaFRUWFxYYFRUYHSggGBolHRcXITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGy0lICYvLTU1Ly0tLS8yLy0tLS0tLS0tLy8tLS0tLS0tLS0tLy0tLS0tLy0tLS0tLS0tLS0tLf/AABEIALkBEAMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABAUCAwYBB//EADwQAAEDAgQDBAgFAwQDAQAAAAEAAgMEEQUSITFBUWEicYGRBhMyQqGxwdFSYnLh8BUjggcUkqLC0vEk/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAMEAgUGAQf/xAA2EQABAgMFBgMIAwADAQAAAAABAAIDBBESITFBUQVhcYGx8BORoQYUIiMywdHhQlLxkrLiM//aAAwDAQACEQMRAD8A+4oiIiIiIiIiIiIiIiIixzBEWSIqqqrydI2lw/FoB4E7+ChjTEKA21EcAN/d/JZNaXYKzzhegrmn1jwQHAtJ21uD4hWNBWX0K9gR4cw23CcHDcjmluKsJZA0KE/Egq0yskaHSON3a5S4gNvwAC9iggds1p+PzXPRfaaE0/LYXDW0B9ip/d9T6fsKecTWP9TUKWGFupYwf4hQqiopgDZrb9Bb4hRD2orhB8nf+V77uP7en7V/FiIJU9jrrlMDvKCRewOh+i6mFtgull47Y8JsVooDqq722XUWxERTLFEWuaTKLqD/AFEXXtCiskWqGUOC2rxEREREREREREREREREREREREREREREWmacN3KiVdablsYzOG/Brf1Hn0GqhmC+shznl7o7m/e61U7taBLVGLtNOJw5XnUBSthE43d96LObEi72GucOYsB5ki/go1NXlx7jYjktWKVhAyM9rpw+yj4S3IO04OcTc2N7KnsraU1ORiS0eHfgM+N9eHNSRITWs3roMQlPqTY2Js2/6iG/VRzoABoBsF5VT5mxjnIP+rXO+ixqTobcj8lqvaWM73gMBwaPUmvQLKCBZChYjHmC0UNQeO43+630Rdks4EW0BO5HcodZGWODgqOyp4yMwQTVpuNL+BHD8jNTRYYcLPl3vVr/AEqGbU5mk7hpsL87EFYDD2xSBrS4gsvqQdQ4BeYfU6gg6FTK115GHmx4/wC0a6TbcpAEm+I1or8JqN7h1VeFEeXWXHI9FQekJIsOa30GDQvtmbwHFRvSM9po7ldYQNu4LW+zkvCih4iNBuGIrmfwpIz3NaKHuit6amZG0NY0ADgFvXgWqeYMa552aCT4LsLmjQBU7yVm+QDdYsnBVJWzSluYua3jlsTboXX38FDjqSWaaF3ZHQnRUIG1ZWNbsk/CKmopdqKqQwXXb7uamlrZLyPGa5OUHUBvCwPTXxVQJgJcjduXAdytq6QRx6cBYKhwOLM90h24H6rk9nPjR59rwaGt/Ug7qK04/AdO6LrcN0GqkPrGhVYe947JyN4Ei7j1twWl9GeEjr9Q0j4ALo4+3pSE6z8R3gXepFeVyrCC7MgK7ZVtK3tN1yrnPj9rb8Q28RuFOpK6262MrOQZlluC4Eeo4jJYPY5mKvUWuOQOC2KysERERERERERERERFFq6kMHMnQNG5PT7rF72sBc40AXoFbgt75AFEdiAUGWNz9XuI/K02A/y3PwVbXgRWLSeoJJB89lpHe0UqyKGEOprd0rWnruUwlycxXvPsb1Oopf7YHH3ueb3r+K8qw5zSGmx8vjwUFr7dsbG2b6OU5xu3RchtGViSkxYcajFpN9Rjw47+SttNr4x2cwqyQxx+0c3T3fLj4qPRz+tlGRtgNyBpZP6eXP7Qc7kANDzudh4q2jpsre04Rjk21/Fx38ldlzDDmzUxEqReAL3XHDRorqRnRtL0cThr3xPdSDctz7XY0cC4/C31UbGK4RhRoqntkx3kDAe/XQ7b8FBMUtTM0BhsDqbWA717tAmemhFhtNHAUqMaXU5EGumKxYyyBU4fknottM6okPZYVumqwWdrQ8uXNdXTU2VRK7A4ZXZnAgnfKbA94stnNezQsjwXXjWg8v2TyzibMA/UKeqofR4GQG2wPzV1igLAyS1w24PTMBY91x8VYUlGyJoYxoAH81Uhbr3C3Je6vdlSul91OFwyUJiDxLQXz2vndPK1rGkm/BdpRUeVb46drdWsaD0A+i33WGy9miSa4Wqk0y0rvOpXsWLboAvVExFhdE9o1JabBS0Wyc0OaWnNRNNCCFzs0jZGWB3Wqioi0gkizSSOdyLa911KxLBSSXxODSd2n2b8SOXcqeSjrPZyHzFvmuBdsyelHlrASCCKgE1HrTK77K+HNcLj+Vr9JK2/YaVNoaPK2OM8e0eoFtPMtXuD+jTg8SzG5Gzd/Mq0q22mb1jNvBwv8x5K6yTiSUjFjPFCQBvo5wtE8cFjaBcGjK/ywULFq/1beqqKL/cS9po04XOp81sx+IlwvsrOgmDe5Q7F2fCnS90U4UwpnWmR05mgXkR/htFO8FhTSOddjwQ4bg7hQifVvy8D8D06K5fJ6yQuGzW5T1N728Pqufx+QZwOoVQ2tnTx8E1APmMwenEVyUg+YKHPv9rpMLm4K3VHhugzHQcVtkxVpNmuB7l9DLhUCuK19CrdFApK4OU4FerxeoiIiIiIijVdSI233J0DRuT0VVUS5AZHm7z8Pyt6fNbauX+87MfZa3KP1XufhbwUasjEgsdlxO3NpudFMBtwaf8AT+PPNXIUOgrqq+nr5JHA27JNh49OKzxyAlqlxQMiGYm9tr20HTr1UR2LNcei0kfwrTTBrhfXM58OF5uqcVNjwXtBMA0C4OmoWTZxGS33fd7v2WFVURZb2F/j58FjhUfr2kEXAO/7810DIzNrQhLOZYe0fCa1FwpQ5ioHCt9yjI8Ml+RxH3WmfHsujBcrKDCamo7UhLG8v2XRUOEQx9prBm5nU/srNXJL2ehw/ijmp0GHncfKh3qJ8cfx9fx+btyr8MwqOBtmjfcnirBEXRw2BjbLbhoq5JJqUXhK01FQ1gJJAA4lcHjf+pMLSY6YOqZOUYc5g73tBv3C69rkvF1+MYzDTMD5nhjS4NBPN223nfhZG4hqvm9PgldiD2y1TS1o9mM9i3cxxuO86rtBhM3No/yP0CoxZ7w3UaxzuAFPMkDyJ35VnEEEXuAVrU4s2NpecxAGzWue49zWgklVmH+lUFQS1jiHjdj2lj/Irz+kzfib/wAj9lXYr6OPlsS0h7fZlZlzNPeLEjooxtMYuhvHIH/qSfRe+AP7A8/zRdTT1fBTgbr55gmMvLnwTtLJ4rZha2Zp2e0cQV01NiB53V9kVjyQ0ioxFbxUVw4KEtIxV8ii09WHKUpFiigYlTGRoLfbabt68wehH0U9FHGhNiwzDeKgihXrXFpBC5N1SHHK8WI3B3HetsdHHwe4DkCLeGlwrivw2OX2hZ3Bw0P7hUk3o3KPYlBHW4P1XGxdiTkrErLOJGoNDwIqPSo4K62Mxw04906LdV18cTbC2mwCosPgdUS5z7DdSTsrSn9EnON5pLj8LfuVYNjYewwARt5e+R82/NIOzzLfPm+Tc3btw1rllglofxPPvE6ea8jbn1PsDYfi/MRy5DxWrEIg4dRseI7lInnAVG+qfnNhoNT3dBxWrmZiNPR7Qvdu3aZiiyhts4KTTTkGx9ofHqFfUNVfRUVXTdkPbuNb/wA4LKhqr6jxC63Yu1fe2WIn1j1GvEZ+etK8aFZ+JuHRdWi000lwty3qrotFROGC5ICxq5xG2+52A4knYBVNQ1o7cpDnddh0a07d+61m0dpw5Nt4q45Vp5noM+F6lhw7Sxr3sl42I2ePl1HRQWyvjOV/geB7j9FrgN3ktG+wGlzv8lKqXODbSNGXmDcDv0BHetNNe5T8Nj4pEOK7DzIFo0pfS43Gmudhoew2ReOVeX6uWUwEjbKtaBm9W8A8jx7iVm8PZq27h8vuteGUUs0wcWkMG5PyC18lKzcpNCGW3HEUqHCvkRvyzzCkJBbUG7XTvTNTIfR5kvvuA5b/ABXSUVCyJoYwWA/lys6aDKFvXZwZOBBcXQ2gE954cqKi6I5woSiIisrBFX4liLYhbdx2H35JileIm/mOw+p6Kmw6MuPrX6uO1/mtZOzxhu8GFS3rk0anUnIczdjYhQai27Dr+l7NTmQXn7WbRsXM8NDspdJg1tXWH5Gdlo6EjV3eVvw5mdxlO2rWd3vO8Tp4K0JXknJQ3DxYgtE5m/mfsMAKUAXsWK4fC27h0H3ONaqtqMMYB2RY8xofAha4KuzCXn2SQTzsdNOZVqRdVMNAcznu4vcWt4C53PUgeF1ZmIFpzfDABzNMt+t+A6CqiY4UNo99/lav93M8/wBtgA/N/NFtpa7McjxleOHA9ymQtLdbLTiFMHtzjRw48RZZRJNtn5da7zjuIwFdQBQrBsQ/yw6ffz6rnfSajDKmmrgBdjxBNp7UM5yi/wCmQsPiVaVOHDeM5Ty5ryoZ6+F8Z0Lmlp/K7mO42KlukWne5r6E/UM8COeOta86i5WmgtJH+KrimLTY6EcFdUNZfQqvrYc4/MNj9FCpKjzHxV6TnrT/AAYv1ZH+w6BwzAuOI0EcSFQWm4dP0utBXqhUNTmCmrZqBERERRa8OMbw2+bKbW324dVVCobkGS1raWV+qLE6HITKwdn32jh+YfULnfaCQix4Yiwz9INRqMajh04KxAcPpPe78KhD3lx6a259ytY6Rr2h2xOxC8FMx+oNjwI/mq2yPbDHvtfzOpXImLDMNjodWvadccwRoRhTgdVaJ76rJzQyPLe9gqPDn3kc0LWZ55r5G3F7XV36PYG6MF8pGZ3DkOvVbjY0nHM02KQQK1rS6l+e/C6qjikBprmrrD22apajGoa3RbIpg5dwqKraqTNIT7sYsP1EXcfAEDxK5mV76mUgGzG8fsrt93RuPFxcfNx+iq8L7II4g+OpOq4qWa2f2k7xTdU3bhdTyA5VV13wMJGSssPgDbuG2zetvad4keQC9xCTslQxPIAGAWDRbNw04laasergub63Ou+vP4LUzkGNbtRW2KmgFKYabgKCvDepbrzWq8weTNflddhSjsrlfRqA5QeZuuuY2wXe7MBbKQwdPTL0oqUb/wChWSIivKJFrkkDQXHQAXPgtipPSaqyxhgPtanuH728lXmo4gQXRXZDzOQ5lZw2F7g0ZrnMVrTLJfmbDoOAVw7YMboXENHT/wCC65mM636rpqBwMrDws4j5fIrkpC1HjEPNS4ip86+mGmGC2swAxgpkCuhijDWho0AFgO5HvAFyQBzJsFlmXJf6kYlRw0v/AO2J0jH3DAGkjPlNu1ezDqbE8iu2ApcFp11oRcv/AKaCb+mUvryS/Ju6+bLmOS99fZt8F1CFeJZeBu/VfOsY9J6+jxSCOf1Rpal+WNrNXNGYMBc4gHPdzSRtY6bL6MvSipJWZJSODhfxbofhZC5bcVFnx/5D4D7KM8rl591iZeNb/MAn1qr0IVYO8CQvHPVRJJaRwHO48ReysXuVFVyf3C4c1rJmKbLS00cDUHQhW4TASQuiw+o1B4FdDE64XH0Umvfr9/51XT4fJcLsJOZEzAbF1x4i4+tVq4rLDi1TERFZUaIiIi5zEsIkaS6HVp9y9iP09Oip5cLq5DlLco5k3C7tVNVVvcXBmUBpsS6+pG9gOA5rnp3ZkhBd40QloJwGu4UPorLIr3XXHisMMomU8YaXDTdx0F0lq3v0j0b+Mjf9I496rI6tuc+tI7I0G4zX1PXS3mtVV6Qt2aLqpO7a8MeDKD4QBePO7IDebzjcshCNauvJ759OK217jHYl5dfcG3wsFYYXIbrmCJ6l4DWG1xry7+S7Wio8gA5AK5sCLMPY7xiSMiSTrUAnH7LGYaBTVV0Vm5ozu0uHgTcHyIWs0jHbjxBsfMKfimG+s7TTleBa/Bw5H7rnpqWqYbercerdR8FoNobHmIMdzmAlpJIIrdU4XYEeqnhvDhUG9WX+2jbq4kgcCdPLiqPFKg1ErYmajj9VtbhVXNoW5Bzd9l0WDYEyAficd3H5DorMlsuZmXh0wTZGZrXlW/hkFi94Zx5LfhtJkaByVivAF6u1AAFAqJNb0REXqIuL9Kp7yFvIAfU/NdouAx195nfqd8yFo9vxC2Xa0ZuHoCetFdkW1iE7lFhCs6GfK5p7x5i/0VWx1iOR07jw89vJWLWXFv5ouXl45l47IuhB4it48lsI7LbC3ULq2zAi91qnqGZf7mUt5OAI6WB3KoI2uHvC3ipUbBe5OY8z9BsF1M37RyjG/Iq87xQDjXHldvWohysQ/Xdwv/Q5+StKGvL3lpblFrt7r2N+XDRWK54yZS1/4d/0nQ/fwVvHUXU2xp103AJcauBv4G8csRyXkdgY4UwK+bwf6fVb8UbUVM/rYIn52Oc8ukLWnMyPKfZsbEnjZfVFieqgV1eGiw1J2HPv5DqtpEiNY0veaAYnRRNaSaDFRMSkvKAPdBJ73HT4D4rF0jbKpxKEOAzE+se6wcC5pudyLHYAE26LyShafelPQySW+a4WNtO3GfFaPq1GQuHpyyvotoyC0NAJ781nVS2Gm6qJgpz4w0WAsAocyoF5cb1bhimCk0Em3f8AP+BdThL1yFEd/wCcQutwnddV7PPrBezR3UBa6fbR4KuERF0CooiIiIudxTD57uEVi1xJ3AIJ1I14XXRIqk5JQptgZFyNbtVmyIWG5UOF4EGx5ZrPcdT07irGnwyJnsxt77XPmVNRZw5WFDDQGi4UBoCaccUMRxrevALL1EVhYIiIiIiIiIiIiIiIiIuAxwWmf+p3zK79cV6Vw5ZS78QB+Fj8lo9vsLpdrhk4eRBHWiuyDqRCNyrGsBFjsVIo5iCGP9r3XcHgf+XMKNCVM9W17crhcHhsb8CCNQeq5G7B3+d5/pbQ6FWDFtaqjPNDoQZmcwP7g/U33u8KXSYlFJ7LxfkdD5KvFgOaLWI1F474qEsIFReFYNWLA5mjSCPwm+ncRwRpWV1HLTkaVf4kF1D3jkVA5rXChXr6iV2l2jrcuPhdaSGtBcT1LifmVprMRjiHacOgGpPQAKPHE+Uh0oysGrYvePIyf+vmrcaam50B0w82RuAHIAAErKHBawVAoOvnjzu1WyC73etIsLWYDvlO7iOBPyA5rc5ZuK0vKrVqai4d98b1ILyo0ygTKZM5QZip2qZi20I38fmF1+EtXLYbHt3/AC1+y7LDo7Bdd7PMIgvdq7oAtbPuq8BTURFv1RRERERERERERERERERERERERERERERERERUXpTS5ow8DVp17j+9vNXq1yRhwLTqCLHxVeagCPBdCOY8jkeRos4byxwcMl83jPBSmOTFaIwyEHwPMcCtUT18/iw3McWuFCLit8CHAOCs4KsHRy9qqOKXV7A487Wd/wAhqoTbFbWxdVA2sM1YSDuUdmhqLkbhDR7EszOgkBH/AGC8/pBO9RMRyzNH0UuEWG91tuvTMRd3/Fv4XniP1WmloIojdre1+I9p/mVIJWGZYl6ieXPNXGqwNSalZuKjSvXr5FGkkWTWrNoWqZyiu1NllK9bqGAuItudlYYwk0aKk3AakqWtkVKtsFprm/LT7rq4m2Cg4bSBjQrFfQJOX93gNhaC/eTeT5rRRX23lyIiKyo0RERERERERERERERERERERERERERERERERERFXYthwmZbZw2P0PRcPUQOjcWkEEcOS+kqvxPDGTDXRw2d9DzC0209liY+Yy549eOhGR5HUW5aZ8L4XYdFw8cikMlXlfhckJ1GnA8+4qKJFyESE5jrLgQdCtsKOFQrFsq2etVa2VZetUVlY2VYGVa3SqGZVg6VLCWVIfKo8kiwL77KVRYe+Q2Av8h3ngpGQy4hrRUnILI0aKlR4Yi4rr8HwzILu3+XRbcMwhsep1dz4DuVqAuu2Xsv3f5sX68h/X9nM5YDMnVTUz4nwtw6oBZeoi3apoiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiLXIwOFiAQeB1Cp630djfq0lp5bj7q8RQR5aFHFIjQftwOIWbIjmGrTRcXUejMrfZs7uNvgVEfg0w3Y7yv8AJd+i1b9gy7vpc4cweoJ9VabPxBjQrgGYPMfcd5EfNTKf0alO4De8j6XXZokPYMu36nOPMDoAfVHT8Q4UCoaP0cY3V5zdBoPurmGFrBZoAHJbUWzgSsGAKQmgdTxOJ81VfEc81caoiIrCwREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREX//2Q==" alt="">
+
+            </div>
+            
+        </div>
+        </div>
+
+        
+</div>
+</body>
+
+<script>
+  function invisible()
+  {
+    document.querySelector("div#in").classList.toggle("invisible");
+  }
+
+
+  function check()
+  {
+    var input=document.querySelector("#t").value;
+    var inputTempArr=[]=input;
+    var temp="";
+    var inputFinalArr=[];
+    
+    
+    var checkTextStr="Trying to make a wise, good choice when thinking about what kinds of careers might be best for you is a hard thing to do. Your future may very well depend on the ways you go about finding the best job openings for you in the world of work. Some people will feel that there is one and only one job in the world for them. Hard thinking and a lot of hard work will help them find the one job that is best for them. Jobs are there for those with skills and a good work ethic. Many new young artists in the upper New England states are famous around the world as leaders in new American art. These fine artists are very good in their chosen fields and are willing to share their many talents by teaching others. The students have had the chance to learn and use skills in oil painting, sketching with chalk, sculpting, and weaving. Learning to typewrite is a skill that will help all of us in our work today. The development of the computer will open doors for people with the keyboarding skills and will make typing a necessity. Managers, as well as secretaries, will need skill at the keyboard to input data and process words. Therefore, good keyboarding skills may be important to you.";
+    
+    var checkTextArr=[]=checkTextStr;
+    var checkFinalText=[];
+
+
+
+    for(var i=0; i<inputTempArr.length+1; i++)
+    {
+      if(inputTempArr[i]==" " || inputTempArr[i]== undefined )
+      {
+          inputFinalArr.push(temp);
+
+          temp="";
+          
+      }
+      else{
+        temp+=inputTempArr[i];
+      }
+    }
+
+    temp="";
+    for(var i=0; i<checkTextArr.length+1; i++)
+    {
+      if(checkTextArr[i]==" " || checkTextArr[i]== undefined )
+      {
+          checkFinalText.push(temp);
+          temp="";
+          
+      }
+      else{
+        temp+=checkTextArr[i];
+      }
+    }
+    var correctWords=0;
+    var wrongWords=0;
+    var totalWords=inputFinalArr.length;
+    
+    for(var i=0;i<inputFinalArr.length;i++)
+    {
+      if(checkFinalText[i]==inputFinalArr[i])
+      {
+        correctWords++;
+      }
+      else{
+        wrongWords++;
+      }
+    }
+   var accuracy=Math.round((correctWords/totalWords)*100);
+   accuracy+="%";
+   document.querySelector("#totalWords").innerHTML="Total Words:- "+ checkFinalText.length;
+   document.querySelector("#totalWordstyped").innerHTML="Total Words You Typed:- "+ inputFinalArr.length;
+   document.querySelector("#correctWords").innerHTML="Correct Words:- "+ correctWords;
+   document.querySelector("#wrongWords").innerHTML="Wrong Words:- "+ wrongWords;
+   document.querySelector("#accuracy").innerHTML="Accuracy:- "+ accuracy;
+   if(accuracy>=80)
+    {
+      
+     document.querySelector(".image").classList.toggle("image");
+    }
+    else{
+      document.querySelector(".image").classList.add(".image");
+    }
+            
+  }
+</script>
+</html>
